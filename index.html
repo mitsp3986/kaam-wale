@@ -3,145 +3,373 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaam-Wale | Verified Local Helpers</title>
+    <title>KaamWale | Find Local Helpers</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
-            theme: { extend: { colors: { brand: '#f97316' } } }
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            500: '#f97316',
+                            600: '#ea580c',
+                        }
+                    }
+                }
+            }
         }
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
         }
     </script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
+<body class="bg-[#fcfbf9] dark:bg-slate-900 text-slate-800 dark:text-slate-100 font-sans transition-colors duration-300">
 
-    <!-- Premium Header -->
-    <header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-200 dark:border-slate-700">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- Header Navigation -->
+    <header class="bg-[#fcfbf9]/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
             
             <!-- Logo -->
             <div class="flex items-center gap-3 cursor-pointer">
-                <div class="w-10 h-10 bg-gradient-to-tr from-orange-500 to-amber-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-orange-500/30">K</div>
-                <h1 class="text-2xl font-black text-slate-900 dark:text-white tracking-tight">Kaam<span class="text-orange-500">-Wale</span></h1>
+                <div class="w-9 h-9 bg-orange-500 rounded-xl flex items-center justify-center text-white font-black text-lg shadow-md shadow-orange-500/20">
+                    <i class="fas fa-hand-holding-heart text-sm"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">Kaam<span class="text-orange-500">Wale</span></span>
             </div>
 
-            <!-- Toggles & Buttons -->
-            <div class="hidden md:flex items-center gap-5">
-                <!-- Theme Toggle -->
-                <button onclick="toggleTheme()" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-all">
-                    <i class="fas fa-moon"></i>
-                </button>
-                
-                <!-- Language Toggle -->
-                <select class="bg-slate-100 dark:bg-slate-700 text-sm font-semibold p-2 rounded-xl text-slate-700 dark:text-slate-200 outline-none cursor-pointer">
-                    <option>Hinglish</option>
-                    <option>English</option>
-                    <option>हिंदी</option>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300">
+                <a href="#" class="hover:text-orange-500 transition-colors">Home</a>
+                <a href="#" class="text-orange-500 font-semibold">Categories</a>
+                <a href="#" class="hover:text-orange-500 transition-colors">How it works</a>
+                <a href="#" class="hover:text-orange-500 transition-colors">For professionals</a>
+                <a href="#" class="hover:text-orange-500 transition-colors">About</a>
+            </nav>
+
+            <!-- Action Controls -->
+            <div class="flex items-center gap-3">
+                <select class="bg-transparent text-xs font-semibold px-2 py-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 outline-none cursor-pointer">
+                    <option>EN</option>
+                    <option>HI</option>
                 </select>
 
-                <button class="px-4 py-2 font-semibold text-slate-700 dark:text-slate-300 hover:text-orange-500 transition-colors">
-                    <i class="fas fa-user mr-2"></i>User Login
+                <button onclick="toggleTheme()" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                    <i class="fas fa-moon"></i>
                 </button>
-                <button class="px-5 py-2.5 bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold rounded-xl shadow-md shadow-orange-500/20 hover:scale-105 transition-all">
-                    <i class="fas fa-wrench mr-2"></i>Join as Helper
-                </button>
+
+                <a href="#" class="hidden sm:inline-block text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-orange-500 px-3 py-2">Log in</a>
+                
+                <a href="#" class="bg-slate-900 dark:bg-orange-500 hover:bg-orange-500 dark:hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition-all shadow-sm">
+                    Get started
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Search Section -->
-    <section class="max-w-7xl mx-auto px-4 py-16 md:py-24 text-center">
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6">
-            Aapke Shehar Ke <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Trusted Helpers</span>
-        </h1>
-        <p class="text-lg text-slate-600 dark:text-slate-400 mb-10 max-w-2xl mx-auto">
-            Bina kisi middleman ke direct call karein. Electrician, Plumber, Maid aur baaki sabhi services aapke Pincode par.
-        </p>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16">
         
-        <!-- Search Box -->
-        <div class="max-w-3xl mx-auto bg-white dark:bg-slate-800 p-3 rounded-2xl shadow-xl flex flex-col md:flex-row gap-3 border border-slate-200 dark:border-slate-700">
-            <div class="flex-1 flex items-center px-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                <i class="fas fa-search text-slate-400"></i>
-                <input type="text" placeholder="Kya service chahiye? (e.g. Plumber)" class="w-full bg-transparent p-3 outline-none text-slate-700 dark:text-white font-medium">
-            </div>
-            <div class="flex-1 flex items-center px-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
-                <i class="fas fa-map-marker-alt text-slate-400"></i>
-                <input type="text" placeholder="Apna Pincode daalein" class="w-full bg-transparent p-3 outline-none text-slate-700 dark:text-white font-medium">
-            </div>
-            <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-xl font-bold transition-colors">
-                Search
-            </button>
+        <!-- Hero Title Section -->
+        <div class="mb-12">
+            <span class="text-xs font-bold text-orange-500 uppercase tracking-widest">Explore Local Services</span>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-2 mb-3">
+                Find the right help for every kind of work.
+            </h1>
+            <p class="text-sm md:text-base text-slate-500 dark:text-slate-400">
+                Browse categories, compare professionals and get your next task moving.
+            </p>
         </div>
-    </section>
 
-    <!-- Categories Grid -->
-    <section class="max-w-7xl mx-auto px-4 py-12">
-        <div class="flex justify-between items-end mb-10">
-            <div>
-                <span class="text-orange-500 font-bold uppercase tracking-wider text-sm">Services</span>
-                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">Explore Categories</h2>
-            </div>
-        </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-            <!-- Category 1 -->
-            <div class="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl transition-all cursor-pointer text-center">
-                <div class="w-16 h-16 mx-auto bg-amber-100 dark:bg-amber-500/10 text-amber-500 flex items-center justify-center rounded-2xl text-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-bolt"></i>
-                </div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-lg">Electrician</h3>
-                <p class="text-xs font-semibold text-slate-500 mt-2 bg-slate-100 dark:bg-slate-900 inline-block px-3 py-1 rounded-full">120+ Near You</p>
-            </div>
-
-            <!-- Category 2 -->
-            <div class="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 hover:shadow-xl transition-all cursor-pointer text-center">
-                <div class="w-16 h-16 mx-auto bg-blue-100 dark:bg-blue-500/10 text-blue-500 flex items-center justify-center rounded-2xl text-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-tint"></i>
-                </div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-lg">Plumber</h3>
-                <p class="text-xs font-semibold text-slate-500 mt-2 bg-slate-100 dark:bg-slate-900 inline-block px-3 py-1 rounded-full">85+ Near You</p>
-            </div>
-
-            <!-- Category 3 -->
-            <div class="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 hover:shadow-xl transition-all cursor-pointer text-center">
-                <div class="w-16 h-16 mx-auto bg-emerald-100 dark:bg-emerald-500/10 text-emerald-500 flex items-center justify-center rounded-2xl text-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-broom"></i>
-                </div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-lg">House Maid</h3>
-                <p class="text-xs font-semibold text-slate-500 mt-2 bg-slate-100 dark:bg-slate-900 inline-block px-3 py-1 rounded-full">200+ Near You</p>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-purple-500 hover:shadow-xl transition-all cursor-pointer text-center">
-                <div class="w-16 h-16 mx-auto bg-purple-100 dark:bg-purple-500/10 text-purple-500 flex items-center justify-center rounded-2xl text-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-paint-roller"></i>
-                </div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-lg">Painter</h3>
-                <p class="text-xs font-semibold text-slate-500 mt-2 bg-slate-100 dark:bg-slate-900 inline-block px-3 py-1 rounded-full">45+ Near You</p>
-            </div>
+        <!-- 4x4 Grid (16 Cards) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             
-            <!-- Category 5 -->
-            <div class="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-rose-500 hover:shadow-xl transition-all cursor-pointer text-center">
-                <div class="w-16 h-16 mx-auto bg-rose-100 dark:bg-rose-500/10 text-rose-500 flex items-center justify-center rounded-2xl text-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-tools"></i>
+            <!-- Card 1 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-500 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Electrician</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Switches, wiring, fans and emergency electrical work.</p>
                 </div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-lg">Appliance Repair</h3>
-                <p class="text-xs font-semibold text-slate-500 mt-2 bg-slate-100 dark:bg-slate-900 inline-block px-3 py-1 rounded-full">90+ Near You</p>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
             </div>
 
-            <!-- Category 6 -->
-            <div class="group bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 hover:shadow-xl transition-all cursor-pointer text-center">
-                <div class="w-16 h-16 mx-auto bg-indigo-100 dark:bg-indigo-500/10 text-indigo-500 flex items-center justify-center rounded-2xl text-2xl mb-4 group-hover:scale-110 transition-transform">
-                    <i class="fas fa-shield-alt"></i>
+            <!-- Card 2 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Plumber</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Leak repairs, fittings and bathroom work.</p>
                 </div>
-                <h3 class="font-bold text-slate-900 dark:text-white text-lg">Security Guard</h3>
-                <p class="text-xs font-semibold text-slate-500 mt-2 bg-slate-100 dark:bg-slate-900 inline-block px-3 py-1 rounded-full">30+ Near You</p>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">House Help</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Reliable help for everyday home tasks.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Carpenter</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Furniture repair and custom fittings.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-950/40 text-rose-500 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Painter</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Fresh walls, textures and complete home painting.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-950/40 text-teal-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Cleaner</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Deep cleaning for homes, offices and water tanks.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/40 text-blue-500 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-snowflake"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">AC Technician</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">AC servicing, installation and repairs.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-purple-50 dark:bg-purple-950/40 text-purple-500 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Appliance Repair</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Trusted repairs for everyday appliances.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-orange-50 dark:bg-orange-950/40 text-orange-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Mechanic</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Two-wheeler and car servicing near you.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Mason</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Construction, tiling and renovation work.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-green-50 dark:bg-green-950/40 text-green-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Gardener</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Garden care and balcony greens.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/40 text-indigo-500 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Locksmith</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Locks, keys and urgent door assistance.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Pest Control</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Safe pest treatment for homes and businesses.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/40 text-sky-500 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Mover & Packer</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Careful local shifting and packing support.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/40 text-blue-600 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Computer Repair</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Laptop, desktop and network troubleshooting.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="bg-white dark:bg-slate-800/80 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-700/60 hover:border-orange-500 dark:hover:border-orange-500 hover:shadow-xl hover:shadow-orange-500/5 transition-all flex flex-col justify-between group">
+                <div>
+                    <div class="w-10 h-10 rounded-xl bg-violet-50 dark:bg-violet-950/40 text-violet-500 flex items-center justify-center text-base mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 dark:text-white text-base mb-1.5">Mobile Repair</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed mb-6">Screen, battery and software repairs.</p>
+                </div>
+                <a href="#" class="text-xs font-bold text-orange-500 flex items-center gap-1.5 group-hover:gap-2.5 transition-all">
+                    Find professionals <i class="fas fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200/70 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-950/50 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+                
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-3">
+                        <div class="w-7 h-7 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <span class="text-lg font-black tracking-tight text-slate-900 dark:text-white">Kaam<span class="text-orange-500">Wale</span></span>
+                    </div>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">Kaam ho koi bhi, KaamWale hai na!</p>
+                    <div class="flex gap-3 text-slate-400">
+                        <a href="#" class="hover:text-orange-500 transition-colors"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-orange-500 transition-colors"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-orange-500 transition-colors"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Explore</h4>
+                    <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Categories</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Find professionals</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">How it works</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">For Professionals</h4>
+                    <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Join KaamWale</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Professional login</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-4">Support</h4>
+                    <ul class="space-y-2 text-xs text-slate-500 dark:text-slate-400">
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">About us</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Privacy</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-200/60 dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-4">
+                <p>© 2026 KaamWale. Direct marketplace experience.</p>
+                <p>Made for local work, with care.</p>
             </div>
         </div>
-    </section>
+    </footer>
 
 </body>
 </html>
